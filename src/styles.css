@@ -1,0 +1,16 @@
+body {
+  margin-top: 50px;
+  margin-left: 450px;
+  margin-right: 450px;
+}
+.frame {
+  border: 5px solid #d3d6db;
+  font-family: "Arimo", sans-serif;
+}
+.col {
+  border: 2px solid #d3d6db;
+  text-align: center;
+}
+#hour {
+  margin: 0px;
+}
