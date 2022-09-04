@@ -11,45 +11,55 @@
       integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
       crossorigin="anonymous"
     />
-    <link href="src/styles.css" rel="stylesheet" type="text/css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Arimo&display=swap"
       rel="stylesheet"
     />
+    <link href="src/styles.css" rel="stylesheet" type="text/css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
-      <div class="frame">
-        <h1 id="city">Rome</h1>
-        <ul>
-          <li id="date">Sun 24th of July</li>
-          <li id="hour">18:20</li>
-          <li id="description">Clear sky</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
-              alt="weather icon"
-            />
-            15°C │ °F
-          </div>
-          <div class="col-6">
+      <div class="wrapper">
+        <div class="frame">
+          <div class="overview">
+            <h1 id="city">Rome</h1>
             <ul>
-              <li>Precipitation: 25%</li>
-              <li>Humidity: 7%</li>
-              <li>Wind speed: 3 km/h</li>
+              <li id="date">Sun 24th of July</li>
+              <li id="hour">18:20</li>
+              <li id="description">Clear sky</li>
             </ul>
           </div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix">
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
+                  alt="weather icon"
+                  class="float-left"
+                />
+                <span class="float-left"
+                  ><strong>15</strong
+                  ><small class="units">°C │ <a href="#">°F</a></small></span
+                >
+              </div>
+            </div>
+            <div class="col-6">
+              <ul>
+                <li>Precipitation: 25%</li>
+                <li>Humidity: 7%</li>
+                <li>Wind speed: 3 km/h</li>
+              </ul>
+            </div>
+          </div>
         </div>
+        <p id="link">
+          <a href="https://github.com/torytk/Project">Open-source code</a> by
+          Victoria Tkachenko
+        </p>
       </div>
     </div>
-    <p id="link">
-      <a href="https://github.com/torytk/Project">Open-source code</a> by
-      Victoria Tkachenko
-    </p>
     <script src="src/index.js"></script>
   </body>
 </html>
