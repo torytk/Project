@@ -40,6 +40,14 @@ li:first-letter {
   font-size: 16px;
   top: -34px;
 }
+.clearfix .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+  text-decoration: none;
+}
+.clearfix .active:hover {
+  text-decoration: none;
+}
 .wrapper {
   max-width: 600px;
   margin: 30px auto;
