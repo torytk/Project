@@ -23,12 +23,31 @@
     <div class="container">
       <div class="wrapper">
         <div class="frame">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="🔍Enter a city"
+                  class="form-control"
+                  id="city-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-95"
+                />
+              </div>
+            </div>
+          </form>
           <div class="overview">
-            <h1 id="city">Rome</h1>
+            <h1 id="city"></h1>
             <ul>
-              <li id="date">Sun 24th of July</li>
-              <li id="hour">18:20</li>
-              <li id="description">Clear sky</li>
+              <li id="date"></li>
+              <li id="hour"></li>
+              <li id="description"></li>
             </ul>
           </div>
           <div class="row">
@@ -37,19 +56,19 @@
                 <img
                   src="https://ssl.gstatic.com/onebox/weather/48/sunny.png"
                   alt="weather icon"
+                  id="icon"
                   class="float-left"
                 />
                 <span class="float-left"
-                  ><strong id="temperature">15</strong
+                  ><strong id="temperature"></strong
                   ><small class="units">°C │ <a href="#">°F</a></small></span
                 >
               </div>
             </div>
             <div class="col-6">
               <ul>
-                <li>Precipitation: <span id="precipitation"></span>%</li>
                 <li>Humidity: <span id="humidity"></span>%</li>
-                <li>Wind speed: <span id="wind"></span>km/h</li>
+                <li>Wind speed: <span id="wind"></span> km/h</li>
               </ul>
             </div>
           </div>

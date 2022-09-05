@@ -43,19 +43,35 @@ function displayWeatherCondition(response) {
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#desciption").innerHTML =
+  document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = response.data.wind.speed;
+  document.querySelector("#wind").innerHTML =
+    Math.round(response.data.wind.speed * 10) / 10;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 function search(event) {
   event.preventDefault();
-  let apiKey = "cb285c35181a5d5c66966a7c4501fc8f";
   let city = document.querySelector("#city-input");
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayWeatherCondition);
+  getWeather(city.value);
   city.value = "";
   city.blur();
 }
+
+function getWeather(city) {
+  let apiKey = "cb285c35181a5d5c66966a7c4501fc8f";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  console.log(apiUrl);
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
+
+getWeather("Kharkiv");
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
