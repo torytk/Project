@@ -14,7 +14,15 @@ time.innerHTML = setCurrentTime();
 
 function setCurrentDate() {
   let now = new Date();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
   let day = days[now.getDay()];
   let months = [
     "January",
